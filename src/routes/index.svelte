@@ -1,2 +1,17 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    let isOpen = async () => {
+        const response = await fetch('https://nolo.coffee/open')
+        const open = await response.text()
+        return open
+    }
+</script>
+<h1>Nolo 503 Coffee</h1>
+<p>
+    {#await isOpen() then open}
+    {#if open === 'false'}
+    Open
+    {:else}
+    Nope
+    {/if}
+    {/await}
+</p>
