@@ -1,4 +1,6 @@
 <script>
+    import Open from '../images/open-sign-svgrepo-com.svelte'
+    import Closed from '../images/closed-svgrepo-com.svelte'
     let isOpen = async () => {
         const response = await fetch('https://nolo.coffee/open')
         const open = await response.text()
@@ -6,12 +8,22 @@
     }
 </script>
 <h1>Nolo 503 Coffee</h1>
-<p>
-    {#await isOpen() then open}
-    {#if open === 'false'}
-    Open
+<p class='open'>
+    {#await isOpen()}
+    loading
+    {:then open}
+    {#if open === 'true'}
+        <Open />
     {:else}
-    Nope
+        <Closed />
     {/if}
+    {:catch}
+        <Closed />
     {/await}
 </p>
+
+<style>
+    .open {
+        max-width: 20vw;
+    }
+</style>
