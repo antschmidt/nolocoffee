@@ -30,12 +30,13 @@
 <style>
 	#main {
 		display: flex;
-        width: 50vw;
         flex-direction: column;
         align-items: center;
-        justify-items: center;
+        /* width: 100vw; */
+        grid-template-columns: 1fr;
 	}
 	.open {
-		max-width: 20vw;
+		width: 70px;
+        height: 70px;
 	}
 </style>
