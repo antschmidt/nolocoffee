@@ -6,30 +6,33 @@
 
 	import 'swiper/css/pagination';
 	import 'swiper/css/navigation';
+    import "swiper/css/effect-cube";
+
 
 	import './carousel.css';
 
 	// import './style.css';
 
 	// import Swiper core and required modules
-	import SwiperCore, { Keyboard, Navigation } from 'swiper';
+	import SwiperCore, { EffectCube, Keyboard, Navigation } from 'swiper';
 
 	// install Swiper modules
-	SwiperCore.use([Keyboard, Navigation]);
+	SwiperCore.use([EffectCube, Keyboard, Navigation]);
 
 	import images from './images.json';
 	const photos = images.result.images.map((image) => image.variants[0]);
 </script>
 
 <Swiper
-	slidesPerView={1}
-	spaceBetween={30}
-	keyboard={{
-		enabled: true
-	}}
-	navigation={true}
-	class="mySwiper"
->
+effect="{'cube'}" grabCursor="{true}" cubeEffect='{{
+    "shadow": true,
+    "slideShadows": true,
+    "shadowOffset": 20,
+    "shadowScale": 0.94
+  }}' pagination="{true}" class="mySwiper"
+keyboard={{
+    enabled: true
+}}  >
 	{#each photos as photo, index}
 		<SwiperSlide>
 			<img src={photo} alt={`latte art ${index}`} />
