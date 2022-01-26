@@ -6,6 +6,7 @@
 		const open = await response.text();
 		return open;
 	};
+    import Carousel from '../carousel.svelte'
 </script>
 
 <div id="main">
@@ -23,25 +24,16 @@
 			<Closed />
 		{/await}
 	</p>
-	<a
-		data-flickr-embed="true"
-		href="https://www.flickr.com/photos/wanderingwondering/albums/72177720296195392"
-		title="latte art"
-		><img
-			src="https://live.staticflickr.com/65535/51832976279_3d82049c47.jpg"
-			width="640"
-			height="480"
-			alt="latte art"
-		/></a
-	><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+    <Carousel />
 </div>
 
 <style>
 	#main {
 		display: flex;
-        width: 100vw;
+        width: 50vw;
         flex-direction: column;
         align-items: center;
+        justify-items: center;
 	}
 	.open {
 		max-width: 20vw;
