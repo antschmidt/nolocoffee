@@ -12,10 +12,10 @@
 	// import './style.css';
 
 	// import Swiper core and required modules
-	import SwiperCore, { Keyboard, Pagination, Navigation } from 'swiper';
+	import SwiperCore, { Keyboard, Navigation } from 'swiper';
 
 	// install Swiper modules
-	SwiperCore.use([Keyboard, Pagination, Navigation]);
+	SwiperCore.use([Keyboard, Navigation]);
 
 	import images from './images.json';
 	const photos = images.result.images.map((image) => image.variants[0]);
