@@ -10,7 +10,7 @@
 </script>
 
 <div id="main">
-	<h1>Nolo Coffee - 503</h1>
+	<h1>Tony's Coffee in Nolo Flats</h1>
 	<p class="open">
 		{#await isOpen()}
 			loading
