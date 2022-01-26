@@ -6,7 +6,7 @@
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: rgba(166, 166, 166, 0);
   
     /* Center slide text vertically */
     display: -webkit-box;
@@ -28,4 +28,14 @@
     max-width: 80%;
     max-height: 80%;
     object-fit: fill;
+  }
+
+  .swiper-button-prev {
+      color: black;
+      height: 8vh;
+  }
+
+  .swiper-button-next {
+      color: black;
+      height: 8vh;
   }

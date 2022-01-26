@@ -7,7 +7,7 @@
 	import 'swiper/css/pagination';
 	import 'swiper/css/navigation';
 
-    import './carousel.css'
+	import './carousel.css';
 
 	// import './style.css';
 
@@ -27,48 +27,14 @@
 	keyboard={{
 		enabled: true
 	}}
-	pagination={{
-		clickable: true
-	}}
 	navigation={true}
 	class="mySwiper"
 >
-	{#each photos as photo, index}<SwiperSlide
-			><img src={photo} alt={`latte art ${index}`} /></SwiperSlide
-		>{/each}
+	{#each photos as photo, index}
+		<SwiperSlide>
+			<img src={photo} alt={`latte art ${index}`} />
+		</SwiperSlide>
+	{/each}
 </Swiper>
-
 <style>
-
 </style>
-<!-- <script>
-	import {fade} from 'svelte/transition'
-
-	const carouselPhotos = photos
-	
-	let index = 0
-	
-	const next = () => {
-		index = (index + 1) % carouselPhotos.length
-	}
-    const prev = () => {
-        index = (index + 1) % carouselPhotos.length
-    }
-</script>
-
-<style>
-	img, button {
-        position: sticky;
-        max-height: 80%;
-        max-width: 80%;
-
-	}
-</style>
-<div>
-<button on:click={prev}>{`<`}</button>
-{#each [carouselPhotos[index]] as src (index)}
-	<img transition:fade {src} alt="" />	
-{/each}
-
-<button on:click={next}>></button>
-</div> -->
