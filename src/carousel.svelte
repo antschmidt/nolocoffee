@@ -6,24 +6,25 @@
 
 	import 'swiper/css/pagination';
 	import 'swiper/css/navigation';
-	import 'swiper/css/effect-cube';
+	// import 'swiper/css/effect-cube';
+    import "swiper/css/effect-cards";
 
 	import './carousel.css';
 
 	// import './style.css';
 
 	// import Swiper core and required modules
-	import SwiperCore, { EffectCube, Keyboard, Navigation } from 'swiper';
+	import SwiperCore, { EffectCards, Keyboard, Navigation } from 'swiper';
 
 	// install Swiper modules
-	SwiperCore.use([EffectCube, Keyboard, Navigation]);
+	SwiperCore.use([EffectCards, Keyboard, Navigation]);
 
 	import images from './images.json';
 	const photos = images.result.images.map((image) => image.variants[0]);
 </script>
 
 <Swiper
-	effect={'cube'}
+	effect={'cards'}
 	grabCursor={true}
 	cubeEffect={{
 		shadow: true,

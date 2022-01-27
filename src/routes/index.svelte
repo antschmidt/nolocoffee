@@ -11,7 +11,7 @@
 
 <div id="main">
 	<h1>Tony's Coffee</h1>
-    <h2>in Nolo Flats</h2>
+    <h3>in Nolo Flats</h3>
 	<p class="open">
 		{#await isOpen()}
 			loading
@@ -41,4 +41,8 @@
 		width: 70px;
         height: 70px;
 	}
+    
+    h3 {
+        height: 1em;
+    }
 </style>
