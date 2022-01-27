@@ -59,6 +59,9 @@
         background: transparent;
         height: 2em;
     }
+    .header-button h1 {
+        position: sticky;
+    }
 
     h1 {
         font-family: Georgia, 'Times New Roman', Times, serif;
