@@ -12,6 +12,6 @@
 
 <style>
     .about {
-        width: 50vw;
+        width: 80vw;
     }
 </style>
