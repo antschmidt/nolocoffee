@@ -7,10 +7,17 @@
 		return open;
 	};
     import Carousel from '../carousel.svelte'
+    import About from '../about.svelte'
+    let showAbout = 0
+    const toggleAbout = (about) => {
+        if(about === 0) return 1
+        return 0
+    }
+    import Info from '../images/info.svelte';
 </script>
 
 <div id="main">
-	<h1>Tony's Coffee</h1>
+	<button class="header-button" on:click={() => showAbout = toggleAbout(showAbout)}><h1>Tony's Coffee</h1></button>
     <h3>in Nolo Flats</h3>
 	<p class="open">
 		{#await isOpen()}
@@ -25,7 +32,11 @@
 			<Closed />
 		{/await}
 	</p>
+    {#if showAbout === 0}
     <Carousel />
+    {:else}
+    <About />
+    {/if}
 </div>
 
 <style>
@@ -41,7 +52,18 @@
 		width: 70px;
         height: 70px;
 	}
-    
+
+    .header-button {
+        text-decoration: none;
+        border: 0px;
+        background: transparent;
+        height: 2em;
+    }
+
+    h1 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
     h3 {
         height: 1em;
     }
