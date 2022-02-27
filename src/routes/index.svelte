@@ -19,6 +19,7 @@
 <div id="main">
 	<button class="header-button" on:click={() => showAbout = toggleAbout(showAbout)}><h1>Tony's Coffee</h1></button>
     <h3>in Nolo Flats</h3>
+    <i class='apt'>503</i>
 	<p class="open">
 		{#await isOpen()}
 			loading
@@ -66,5 +67,13 @@
 
     h3 {
         height: 1em;
+        margin-bottom: 0;
+    }
+    .apt {
+        font-size: .75em;
+        position: unset;
+        /* border: 1px black; */
+        /* transform-origin: 0 0; */
+        /* transform: rotate(-45deg); */
     }
 </style>
