@@ -22,7 +22,7 @@
     <i class='apt'>503</i>
     <p class='note'>Hey neighbors, my weekends have been booked making my regular hours of 10-1 on Saturday and Sunday difficult to keep.<br>
         If you ever just want to swing by for a coffee, even if it doesn't say open here, <br>
-        just hit me up on Instagram @antschmidt or e-mail me at <email>barista@nolo.coffee</email></p>
+        just hit me up on Instagram @antschmidt or e-mail me at <a href='mailto:barista@nolo.coffee'>barista@nolo.coffee</email></p>
 	<p class="open">
 		{#await isOpen()}
 			loading
