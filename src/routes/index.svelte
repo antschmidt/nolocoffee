@@ -20,9 +20,9 @@
 	<button class="header-button" on:click={() => showAbout = toggleAbout(showAbout)}><h1>Tony's Coffee</h1></button>
     <h3>in Nolo Flats</h3>
     <i class='apt'>503</i>
-    <p>My apologies neighbors. My weekends have been booked making my regular hours of 10-1 on Saturday and Sunday difficult to keep.<br>
+    <p class='note'>Hey neighbors, my weekends have been booked making my regular hours of 10-1 on Saturday and Sunday difficult to keep.<br>
         If you ever just want to swing by for a coffee, even if it doesn't say open here, <br>
-        just hit me up on Instagram @antschmidt</p>
+        just hit me up on Instagram @antschmidt or e-mail me at <email>barista@nolo.coffee</email></p>
 	<p class="open">
 		{#await isOpen()}
 			loading
@@ -62,6 +62,12 @@
     }
     .header-button h1 {
         position: sticky;
+    }
+
+    .note {
+        border: 1px solid;
+        padding: 10px;
+        text-align: center;
     }
 
     h1 {
